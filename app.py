@@ -19,7 +19,7 @@ df_top_10 = df[df['district'].isin(top_10_districts.index)]
 # Create the pie chart
 st.write('Top 10 Districts by Number of Properties in Riyadh')
 st.image("sec_pic.png")
-
+st.markdown("Through this exploration, we discovered that the age of the property impacts the price. Generally, older properties tend to have lower rental prices.")
 st.image('thered.png')
 
 
