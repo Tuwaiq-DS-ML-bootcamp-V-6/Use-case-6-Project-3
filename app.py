@@ -18,17 +18,6 @@ df_top_10 = df[df['district'].isin(top_10_districts.index)]
 st.write('Top 10 Districts by Number of Properties in Riyadh')
 st.image("sec_pic.png")
 
-corr_matrix = df.corr()
+st.image('thered.png')
 
-# Create the heatmap using Plotly
-fig = px.imshow(corr_matrix, text_auto=True, aspect="auto")
-
-# Set the title of the heatmap
-fig.update_layout(title="Heatmap of Correlation Matrix")
-
-# Title of the app
-st.title('Heatmap of Property Attributes')
-
-# Display the heatmap
-st.plotly_chart(fig)
 
