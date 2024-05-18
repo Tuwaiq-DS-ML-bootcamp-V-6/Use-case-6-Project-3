@@ -33,7 +33,7 @@ df_top_10 = df[df['district'].isin(top_10_districts.index)]
 # Create the pie chart
 st.write('Top 10 Districts by Number of Properties in Riyadh')
 
-image_path = 'd.png'
+image_path = 'image copy 3.png'
 image = Image.open(image_path)
 frame_width = 2 
 frame_color = (21, 60, 61)  
@@ -46,10 +46,6 @@ st.image(framed_image, use_column_width=True)
 
 
 
-
-search = load_lottiefile("ani2.json")
-
-st_lottie(search,key="search",width=200)
 
 
 st.markdown("Through this exploration, we discovered that the age of the property impacts the price. Generally, older properties tend to have lower rental prices.")
@@ -65,7 +61,7 @@ st.image(framed_image, use_column_width=True)
 
 st.markdown("From our analysis, we found that an increase in the number of bathrooms is associated with an increase in the apartment size. However, this leads to a significant rise in prices, making them less attractive to buyers and investors. Therefore, investing in moderately sized apartments with a reasonable number of bathrooms can be more effective in attracting buyers and ensuring a quicker return on investment.")
 
-image_path = 'image.png'
+image_path = 'image copy 2.png'
 image = Image.open(image_path)
 frame_width = 2 
 frame_color = (21, 60, 61)  
