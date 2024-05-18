@@ -1,4 +1,5 @@
 import streamlit as st
+import apartment
 
 
 def body():
@@ -7,4 +8,4 @@ def body():
     st.header("The Villa of Comfort")
     st.write("")
     st.header("The Cozy Apartment")
-    st.write("")
+    apartment.main()
