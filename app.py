@@ -61,7 +61,7 @@ st.image(framed_image, use_column_width=True)
 
 st.markdown("From our analysis, we found that an increase in the number of bathrooms is associated with an increase in the apartment size. However, this leads to a significant rise in prices, making them less attractive to buyers and investors. Therefore, investing in moderately sized apartments with a reasonable number of bathrooms can be more effective in attracting buyers and ensuring a quicker return on investment.")
 
-image_path = 'image copy 2.png'
+image_path = 'image.png'
 image = Image.open(image_path)
 frame_width = 2 
 frame_color = (21, 60, 61)  
