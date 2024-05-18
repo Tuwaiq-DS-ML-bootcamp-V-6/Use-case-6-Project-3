@@ -17,7 +17,7 @@ The dataset contains details about the available Lands in Riyadh. It includes in
 
 ### Consistency
 
- is not consistent among other sources 
+ is not consistent among other sources
 
 ### Timeliness
 
@@ -25,17 +25,16 @@ The dataset contains details about the available Lands in Riyadh. It includes in
 
 ### Relevance
 
- we dropped column 'المدينة' beLcause we don't need it 
+ we dropped column 'المدينة' beLcause we don't need it
 
 ### Uniqueness
 
- we dropped the duplicated rows 
-
+ we dropped the duplicated rows
 
 ### Completeness
 
  we filled غير معروف for non-numerical columns
- 
+
 ### Check Accuracy
 
  we changed the columns type from float to int for consistency
