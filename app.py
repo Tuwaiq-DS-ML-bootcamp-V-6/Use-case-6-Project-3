@@ -20,7 +20,7 @@ def load_lottieurl(url: str):
 realestate = load_lottiefile("ani1.json")
 
 st_lottie(realestate,key="real_estate")
-st.title("the truth of real estate in Riyadh")
+st.markdown("<h1 style='font-size: 36px;'>The <span style='color: red;'>Truth</span> of real estate in Riyadh</h1>", unsafe_allow_html=True)
 
 # Calculate the top 10 districts
 df=pd.read_csv("realEstate.csv")
