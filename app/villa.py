@@ -1,16 +1,130 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-
-
-def main():
-    st.markdown("**TEST**")
-
+import plotly.graph_objects as go
 
 villas = pd.read_csv("app/data/villas.csv")
 villas.drop(villas[villas["الحي"] == " "].index, inplace=True)
 
 
+def bar_color():
+    uinput = st.selectbox("???", ['عدد الغرف','عدد الصالات','عدد الحمامات'])
+    villas['الحي'] = villas['الحي'].astype(str)
+    villas[uinput] = villas[uinput].astype(str)
+
+    # Temporary DataFrame to avoid multi-index issues
+    temp = villas[["الحي", uinput]].copy()
+    temp.columns = ["dis", "per"]
+
+    # Count the number of properties per حي and عدد الغرف
+    counts = temp.groupby(['dis', 'per']).size().unstack(fill_value=0)
+
+    # Compute the total count and sort by it
+    counts['Total'] = counts.sum(axis=1)
+    counts = counts.nlargest(10, 'Total').sort_values(by='Total', ascending=True)
+    counts = counts.drop(columns='Total')
+
+    # Create traces for each value of uinput
+    traces = []
+    for purpose in counts.columns:
+        traces.append(go.Bar(
+        y=counts.index,
+        x=counts[purpose],
+        name=purpose,
+        text=counts[purpose],
+        textposition='inside',
+        orientation='h'
+    ))
+
+# Create the figure
+    fig = go.Figure(data=traces)
+
+    # Update the layout
+    fig.update_layout(
+        barmode='stack',
+        title=f'(الحي vs {uinput}) أفضل 10 أحياء حسب عدد العقارات',
+        yaxis=dict(title='الحي'),
+        xaxis=dict(title='Count'),
+        hoverlabel=dict(bgcolor="white", font_size=16, font_family="Rockwell")
+    )
+
+    # Show the figure
+    
+
+    return fig
+def bars():
+    uinput = st.selectbox("???", ['المساحة','السعر الاجمالي'])
+    mean_area = villas.groupby('الحي')[uinput].mean().sort_values().reset_index()
+
+    # Plot
+    fig = px.bar(mean_area, x='الحي', y=uinput, labels={'الحي': 'الحي', uinput: f'{uinput} (متوسط بالمتر المربع)'}, title=f'الحي vs. متوسط {uinput}')
+
+    # Streamlit UI
+    st.title(f'توزيع {uinput} في الأحياء')
+    
+
+
+    return fig
+
+
+def bar_color2():
+    uinput = st.selectbox("???", ['درج صالة','مطبخ','غرفة خادمة','غرفة سائق','ملحق','حوش','مسبح','قبو'])
+    villas[uinput] = villas[uinput].astype(str)
+
+    # Count the number of properties per حي and مطبخ
+    counts = villas.groupby(['الحي', uinput]).size().unstack(fill_value=0)
+
+    # Compute the total count and sort by it
+    counts['Total'] = counts.sum(axis=1)
+    counts = counts.nlargest(10, 'Total').sort_values(by='Total', ascending=True)
+    counts = counts.drop(columns='Total')
+
+    # Create traces for each value of uinput
+    trace_0 = go.Bar(
+        y=counts.index,
+        x=counts['0'],
+        name=f' بدون {uinput}  ',
+        text=counts['0'],
+        textposition='inside',
+        orientation='h'
+    )
+
+    trace_1 = go.Bar(
+        y=counts.index,
+        x=counts['1'],
+        name=f'{uinput}',
+        text=counts['1'],
+        textposition='inside',
+        orientation='h'
+    )
+
+    # Create the figure
+    fig = go.Figure(data=[trace_0, trace_1])
+
+    # Update the layout
+    fig.update_layout(
+        barmode='stack',
+        title=f'(الحي vs {uinput}) أفضل 10 أحياء حسب عدد العقارات',
+        yaxis=dict(title='الحي'),
+        xaxis=dict(title='Count'),
+        hoverlabel=dict(bgcolor="white", font_size=16, font_family="Rockwell")
+    )
+
+    return fig
+
+def main():
+    st.markdown("**TEST**")
+    st.plotly_chart(bar_color())
+
+
+    st.plotly_chart(bars())
+
+    st.plotly_chart(bar_color2())
+
+
+
+
+main()
 st.text(
     "What is the distribution of properties based on their number of rooms (عدد الغرف)?"
 )
