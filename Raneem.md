@@ -1,8 +1,8 @@
-## About the Dataset {Name}
-
+## About the Dataset {apartments}
+The dataset contains details about the available apartments in Riyadh. It includes information such as the number of rooms and bathrooms in each apartment, as well as the specific neighborhoods or areas where these apartments are located.
 - **Source**: [default: Kaggle + other source if found]
 - **License**: [if found]
-- **Key Concepts**: [if needed]
+
 
 ## Data Profiling and Quality Checks
 
