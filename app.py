@@ -31,7 +31,8 @@ top_10_districts = district_counts.nlargest(10)
 df_top_10 = df[df['district'].isin(top_10_districts.index)]
 
 # Create the pie chart
-st.write('**highlighting riyadh from above**')
+
+st.markdown("## highlighting riyadh from above")
 
 image_path = 'image copy 3.png'
 image = Image.open(image_path)
@@ -39,7 +40,10 @@ frame_width = 2
 frame_color = (21, 60, 61)  
 framed_image = ImageOps.expand(image, border=frame_width, fill=frame_color)
 st.image(framed_image, use_column_width=True)
-st.write('**age x price**')
+st.markdown("As we delved into the heatmap, an interesting pattern came to light: the northern side of Riyadh has become the most sought-after area for buyers. This revelation encourages us to guide investors to focus their efforts on this thriving part of the city.")
+
+st.markdown("## age x price")
+
 image_path = 'image copy 4.png'
 image = Image.open(image_path)
 frame_width = 2 
