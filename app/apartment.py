@@ -101,24 +101,20 @@ def piechart():
 
 
 def main():
-    # st.plotly_chart(bars())
-
-    # st.markdown("""
-    #             **What are the key features about your new apartment building ?**""")
-
     st.plotly_chart(bars())
 
     st.markdown(
         """**Silly Belly's Insight:** Think like an old prospector: consider the price, age, and space. These are your tools for striking it rich in comfort."""
     )
-
-    # st.markdown("""**What are the key features about your new apartment?**""")
+    st.divider()
 
     st.plotly_chart(bar_color())
 
     st.markdown(
         """**Silly Belly's Insight:** Check for a kitchen, elevator, parking, and if it's furnished. These goodies turn a place into a cozy home."""
     )
+
+    st.divider()
 
     st.markdown("""**Where can I start from?**""")
 
