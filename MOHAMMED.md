@@ -1,60 +1,40 @@
-# Use-case-[num]: [Title]
+## About the Lands Dataset
 
-## Overview
+- **Source**: MYFAISAL from Aqaar app (Kaggle)
+- **License**: Unknown
 
-[About the project]
+The dataset contains details about the available Lands in Riyadh. It includes information such as the Total price for each land, as well as the specific neighborhoods or areas where these Lands are located.
 
-## Questions
 
-[Qn. Question]
-[graph]
-[**answer:**][description]
-
-## About the Dataset
-
-- **Source**: [default: Kaggle + other source if found]
-- **License**: [if found]
-- **Key Concepts**: [if needed]
 
 ## Data Profiling and Quality Checks
 
 ### Reliability
 
-- **Source**: [same as above]
-- **License**: [same as above]
-- **Data Timeliness**: [same as above]
+- **Source**: MYFAISAL from Aqaar app (Kaggle)
+- **License**: Unknown
+- **Data Timeliness**: the data is up-to-date for our usecase
 
 ### Consistency
 
-[consistency]
+ is not consistent among other sources
 
 ### Timeliness
 
-[timeliness]
+ the data is up-to-date for our usecase
 
 ### Relevance
 
-[relevance]
+ we dropped column 'المدينة' beLcause we don't need it
 
 ### Uniqueness
 
-[uniqueness]
+ we dropped the duplicated rows
 
 ### Completeness
 
-[completeness]
+ we filled غير معروف for non-numerical columns
 
 ### Check Accuracy
 
-[check Accuracy]
-
-## Setup Instructions
-
-1. Download the datasets from [Source Name](Source URL).
-2. Ensure Python 3.x and necessary libraries ([List of lib used]) are installed.
-
-   ```bash
-   pip install [List of lib used]
-   ```
-
-**_Riyadh Alghamdi_**
+ we changed the columns type from float to int for consistency
