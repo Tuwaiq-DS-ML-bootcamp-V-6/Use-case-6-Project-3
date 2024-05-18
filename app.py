@@ -31,7 +31,7 @@ top_10_districts = district_counts.nlargest(10)
 df_top_10 = df[df['district'].isin(top_10_districts.index)]
 
 # Create the pie chart
-st.write('Top 10 Districts by Number of Properties in Riyadh')
+st.write('**highlighting riyadh from above**')
 
 image_path = 'image copy 3.png'
 image = Image.open(image_path)
