@@ -2,7 +2,7 @@ import streamlit as st
 
 
 def main():
-    pass
+    st.markdown("**What should you look for in a plot of land?**")
 
 
 # feel free to edit it
