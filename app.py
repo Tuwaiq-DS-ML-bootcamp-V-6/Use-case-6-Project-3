@@ -2,9 +2,28 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 from PIL import Image, ImageOps
+import json
+import requests 
+from streamlit_lottie import st_lottie
+def load_lottiefile(filepath: str):
+    with open(filepath, "r") as f:
+        return json.load(f)
+
+
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+    
+
+realestate = load_lottiefile("ani1.json")
+
+st_lottie(realestate,key="real_estate")
+
+
 # Calculate the top 10 districts
 df=pd.read_csv("realEstate.csv")
-st.image("pic.png",use_column_width=True)
 st.markdown("What factors make the real estate market in Riyadh attractive to investors?The real estate market for apartments in Riyadh is considered one of the most important property markets in the Kingdom of Saudi Arabia for investors. Riyadh offers diverse and lucrative opportunities for investing in apartment properties, whether through purchasing and leasing apartments or developing new real estate projects.During our research, a set of data revealed the most suitable places for investment.Various areas in Riyadh cater to the needs of investors, ranging from upscale residential neighborhoods to industrial and commercial zones. Investors can achieve substantial returns on their investments in Riyadh's apartment market due to the strong demand for housing in the city.")
 
 district_counts = df['district'].value_counts()
@@ -19,7 +38,7 @@ image = Image.open(image_path)
 frame_width = 2 
 frame_color = (21, 60, 61)  
 framed_image = ImageOps.expand(image, border=frame_width, fill=frame_color)
-st.image(framed_image, caption='Framed Image', use_column_width=True)
+st.image(framed_image, use_column_width=True)
 
 
 
@@ -27,6 +46,10 @@ st.image(framed_image, caption='Framed Image', use_column_width=True)
 
 
 
+
+search = load_lottiefile("ani2.json")
+
+st_lottie(search,key="search",width=200)
 
 
 st.markdown("Through this exploration, we discovered that the age of the property impacts the price. Generally, older properties tend to have lower rental prices.")
