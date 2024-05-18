@@ -9,7 +9,6 @@ def intro():
     st.write("""
              When thinking about moving to Riyadh, imagine you're setting out on an exciting journey. Picture yourself guided by an old friend who knows the city well and is ready to share insights about the best places to live, whether it's a cozy apartment, a luxurious villa, or a perfect plot of land. Silly Belly absolutely got you covered with his insights.
     """)
-    khalid.main()
 
 
 def conclusion():
@@ -33,7 +32,8 @@ def main():
     sidebar(options)
     # st.write(options)
     intro()
-    b.body()
+    # st.write(type(options["select_type"]))
+    b.body(options["select_type"])
     conclusion()
 
 

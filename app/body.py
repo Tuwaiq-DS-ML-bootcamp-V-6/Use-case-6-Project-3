@@ -4,10 +4,19 @@ import villa
 import land
 
 
-def body():
-    st.header("The Land of Dreams")
-    land.main()
-    st.header("The Villa of Comfort")
-    villa.main()
-    st.header("The Cozy Apartment")
-    apartment.main()
+def body(target: str) -> None:
+    match target:
+        case "Lands":
+            st.header("The Land of Dreams")
+            land.main()
+
+        case "Villas":
+            st.header("The Land of Dreams")
+            land.main()
+
+        case "Apartments":
+            st.header("The Cozy Apartment")
+            apartment.main()
+        case _:
+            st.header("The Land of Dreams")
+            land.main()
