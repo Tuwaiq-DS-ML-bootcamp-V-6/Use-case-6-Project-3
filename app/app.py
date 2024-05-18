@@ -55,7 +55,7 @@ def sidebar(options):
     with st.form(key="Form1"):
         with st.sidebar:
             st.title("Let old Silly Belly help you")
-            st.image("app\images\sillybelly.png")
+            st.image("app/images/sillybelly.png")
 
             options["select_type"] = st.sidebar.radio(
                 "What kind of property are looking for?",
