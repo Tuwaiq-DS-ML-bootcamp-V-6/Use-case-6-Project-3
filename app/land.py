@@ -2,13 +2,14 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-lands = pd.read_csv('/Users/aabdu/Desktop/DS-ML-bootcamp/Use-case-6-Project-3/Use-case-6-Project-3/cleaned/lands_cleaned.csv')
+
+lands = pd.read_csv("app/data/lands.csv")
+
+
 def bar_color():
-    st.title('Real Estate Analysis')
-    uinput = st.selectbox(
-     "???",
-     ['الغرض', 'الواجهة'])
-    lands['الحي'] = lands['الحي'].astype(str)
+    st.title("Real Estate Analysis")
+    uinput = st.selectbox("???", ["الغرض", "الواجهة"])
+    lands["الحي"] = lands["الحي"].astype(str)
     lands[uinput] = lands[uinput].astype(str)
 
     # Temporary DataFrame to avoid multi-index issues
@@ -16,47 +17,48 @@ def bar_color():
     temp.columns = ["dis", "per"]
 
     # Count the number of properties per حي and الغرض
-    counts = temp.groupby(['dis', 'per']).size().unstack(fill_value=0)
+    counts = temp.groupby(["dis", "per"]).size().unstack(fill_value=0)
 
     # Compute the total count and sort by it
-    counts['Total'] = counts.sum(axis=1)
-    counts = counts.nlargest(10, 'Total').sort_values(by='Total', ascending=True)
-    counts = counts.drop(columns='Total')
+    counts["Total"] = counts.sum(axis=1)
+    counts = counts.nlargest(10, "Total").sort_values(by="Total", ascending=True)
+    counts = counts.drop(columns="Total")
 
     # Create traces for each value of 'الغرض'
     traces = []
     for purpose in counts.columns:
-        traces.append(go.Bar(
-            y=counts.index,
-            x=counts[purpose],
-            name=purpose,
-            text=counts[purpose],
-            textposition='inside',
-            orientation='h'
-        ))
+        traces.append(
+            go.Bar(
+                y=counts.index,
+                x=counts[purpose],
+                name=purpose,
+                text=counts[purpose],
+                textposition="inside",
+                orientation="h",
+            )
+        )
 
     # Create the figure
     fig = go.Figure(data=traces)
 
     # Update the layout
     fig.update_layout(
-        barmode='stack',
-        title=f'(الحي vs {uinput}) أفضل 10 أحياء حسب عدد العقارات',
-        yaxis=dict(title='الحي'),
-        xaxis=dict(title='Count'),
-        hoverlabel=dict(bgcolor="white", font_size=16, font_family="Rockwell")
+        barmode="stack",
+        title=f"(الحي vs {uinput}) أفضل 10 أحياء حسب عدد العقارات",
+        yaxis=dict(title="الحي"),
+        xaxis=dict(title="Count"),
+        hoverlabel=dict(bgcolor="white", font_size=16, font_family="Rockwell"),
     )
 
     # Streamlit rendering
-    
-    #st.plotly_chart(fig)
+
+    # st.plotly_chart(fig)
     return fig
 
 
 def main():
     st.markdown("**What should you look for in a plot of land?**")
     st.plotly_chart(bar_color())
-
 
 
 main()
