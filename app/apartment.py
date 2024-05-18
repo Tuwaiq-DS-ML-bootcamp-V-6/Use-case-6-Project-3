@@ -9,7 +9,7 @@ def main():
 """
 
 What are the key features to look for in an apartment?
-Input: [Select desired features]
+Input: [Select desired features]--> apartments including this features 
 Insight: Apartments in Riyadh offer modern living with community and convenience. Look for apartments with good facilities, security, and a friendly neighborhood.
 
 How important is the location of an apartment?

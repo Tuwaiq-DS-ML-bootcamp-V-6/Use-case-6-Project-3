@@ -7,7 +7,7 @@ import khalid
 def intro():
     st.title("Find Your New Home in Riyadh!")
     st.write("""
-             When thinking about moving to Riyadh, imagine you're setting out on an exciting journey. Picture yourself guided by an old friend who knows the city well and is ready to share insights about the best places to live, whether it's a cozy apartment, a luxurious villa, or a perfect plot of land. Silly Belly absolutely got you covered with our insights.
+             When thinking about moving to Riyadh, imagine you're setting out on an exciting journey. Picture yourself guided by an old friend who knows the city well and is ready to share insights about the best places to live, whether it's a cozy apartment, a luxurious villa, or a perfect plot of land. Silly Belly absolutely got you covered with his insights.
     """)
     khalid.main()
 
@@ -24,7 +24,7 @@ def sidebar(options):
 
             options["select_type"] = st.sidebar.radio(
                 "What kind of property are looking for?",
-                ("Silly Belly's story", "Lands", "Apartments", "Villas"),
+                ("Lands", "Apartments", "Villas"),
             )
 
 
