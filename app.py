@@ -39,6 +39,15 @@ frame_width = 2
 frame_color = (21, 60, 61)  
 framed_image = ImageOps.expand(image, border=frame_width, fill=frame_color)
 st.image(framed_image, use_column_width=True)
+st.write('**age x price**')
+image_path = 'image copy 4.png'
+image = Image.open(image_path)
+frame_width = 2 
+frame_color = (21, 60, 61)  
+framed_image = ImageOps.expand(image, border=frame_width, fill=frame_color)
+st.image(framed_image, use_column_width=True)
+
+
 
 
 
