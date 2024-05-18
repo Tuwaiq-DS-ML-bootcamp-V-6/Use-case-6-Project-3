@@ -11,8 +11,8 @@ def body(target: str) -> None:
             land.main()
 
         case "Villas":
-            st.header("The Land of Dreams")
-            land.main()
+            st.header("The Villa of Comfort")
+            villa.main()
 
         case "Apartments":
             st.header("The Cozy Apartment")

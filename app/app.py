@@ -1,7 +1,6 @@
 import streamlit as st
 import plotly.express as px
 import body as b
-import khalid
 
 
 def intro():
@@ -29,6 +28,9 @@ def sidebar(options):
 
 def main():
     options = {}
+
+    col1, col2, col3 = st.columns([0.2, 5, 0.2])
+    col2.image("app/images/sillybelly-house.png", use_column_width=True)
     sidebar(options)
     # st.write(options)
     intro()
