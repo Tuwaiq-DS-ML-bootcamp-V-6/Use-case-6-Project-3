@@ -10,25 +10,6 @@ def intro():
     """)
 
 
-from urllib.request import urlopen
-import json
-
-
-def body():
-    # with urlopen(
-    #     "https://raw.githubusercontent.com/Alnasser0/Saudi_Arabia-GeoJSON/master/SAU-geo.json"
-    # ) as response:
-    #     counties = json.load(response)
-    #     fig = px.choropleth(
-    #         geojson=counties,
-    #         range_color=(0, 12),
-    #     )
-    #     fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
-    #     fig.show()
-
-    b.body()
-
-
 def conclusion():
     st.header("THE END")
 
@@ -37,7 +18,7 @@ def sidebar(options):
     with st.form(key="Form1"):
         with st.sidebar:
             st.title("Let old Silly Belly help you")
-            st.image("E:/Dev/Work/Tuwaiq/Use-case-6-Project-3/app/image.png")
+            st.image("app\images\sillybelly.png")
 
             options["select_type"] = st.sidebar.radio(
                 "What kind of property are looking for?",
@@ -48,8 +29,9 @@ def sidebar(options):
 def main():
     options = {}
     sidebar(options)
+    # st.write(options)
     intro()
-    body()
+    b.body()
     conclusion()
 
 
