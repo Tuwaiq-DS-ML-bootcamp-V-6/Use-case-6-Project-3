@@ -1,5 +1,7 @@
 # Riyadh Villas Aqar Dataset
 
+
+
 ## Overview
 
 The **Riyadh Villas Aqar Dataset** contains comprehensive information about villas in Riyadh, Saudi Arabia. The dataset includes various features such as the number of rooms, bathrooms, property age, and more, making it suitable for detailed exploratory data analysis (EDA), data visualization, and statistical analysis.
@@ -58,3 +60,8 @@ This section provides an overview of the Python libraries used for data analysis
 The dataset contains some missing values and mixed data types in columns like lounges and apartments. Data cleaning and preprocessing might be necessary before performing in-depth analysis
 Make sure to handle the non-null constraints and mixed-type columns appropriately during your analysis.
 **
+
+## Deployment
+### https://stramlit-proj-gclahkmqe6bhk74cqx7rxk.streamlit.app/
+
+
