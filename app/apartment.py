@@ -24,6 +24,7 @@ def bars():
         y=uinput,
         labels={"الحي": "الحي", uinput: f"{uinput} (متوسط بالسنة)"},
         title=f"الحي vs. متوسط {uinput}",
+        orientation="h",
     )
 
     return fig_age
