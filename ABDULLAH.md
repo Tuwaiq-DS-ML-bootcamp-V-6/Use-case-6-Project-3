@@ -22,7 +22,7 @@ up to date for our use case.
 
 ### Relevance
 
-The columns [المدينة] and [نوع العقار] are not needed in our case.
+The column [المدينة] are not needed in our case.
 
 ### Uniqueness
 
