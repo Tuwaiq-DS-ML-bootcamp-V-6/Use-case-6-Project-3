@@ -1,4 +1,11 @@
-## Team Members:
+# Use-case-6-Project-3: Silly Belly
+
+![alt text](app/images/sillybelly.png)
+
+## Team Members
+
+_Silly Belly (Honorary Member)_
+
 _Riyadh Alghamdi_
 
 _Khalid Saeed_
@@ -8,6 +15,7 @@ _Mohammed Alaklabi_
 _Abdullah Altuwayjiri_
 
 _Raneem Aljabri_
+
 
 
 ## Objectives
@@ -23,17 +31,50 @@ The real estate market in Riyadh is rapidly evolving, with new developments and 
 
 ## Questions
 
-1. What is the proportion of purpose to each district in Lands? 
+1. What is the proportion of purpose to each district in Lands?
+
+![alt text](images/1.png)
+
 2. What is the proportion of purpose to each frontage in Lands?
+
+![alt text](images/2.png)
+
 3. What is the general distribution of land offers across different neighborhoods?
+
+![alt text](images/3.png)
+
 4. What is the mean price for each district in Apartments?
-5. What is the mean age for each district in Apartments? 
+
+![alt text](images/4.png)
+
+5. What is the mean age for each district in Apartments?
+
+![alt text](images/5.png)
+
 6. What is the mean space for each district in Apartments?
+
+![alt text](images/6.png)
+
 7. What is the proportion of having kitchen to each district in Apartments?
+
+![alt text](images/7.png)
+
 8. What is the proportion of furnished to each district in Apartments?
+
+![alt text](images/8.png)
+
 9. What is the general distribution of Apartments offers across different neighborhoods?
+
+![alt text](images/9.png)
+
 10. How many bathrooms do villas in for each district?
+
+![alt text](images/10.png)
+
 11. What is the proportion of driver room to each district in Villas?
+
+![alt text](images/11.png)
+
  You can find more Insights in the Streamlit ..
 
 ## About the Apartments Dataset
