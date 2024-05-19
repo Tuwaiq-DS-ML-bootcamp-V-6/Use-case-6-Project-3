@@ -68,8 +68,8 @@ def bars():
     # Plot
     fig = px.bar(
         mean_area,
-        x="الحي",
-        y=uinput,
+        x=uinput,
+        y="الحي",
         labels={"الحي": "الحي", uinput: f"{uinput} (متوسط بالمتر المربع)"},
         title=f"الحي vs. متوسط {uinput}",
     )
