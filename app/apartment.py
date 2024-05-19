@@ -33,7 +33,7 @@ def bar_color():
     apartments["مؤثثة"] = apartments["مؤثثة"].astype(str)
     features_input = st.selectbox(
         "What are the key features about your new apartment?",
-        ["مطبخ", "مدخل سيارة", "مصعد", "مؤثثة", "عدد الصالات"],
+        ["مطبخ", "مدخل سيارة", "مصعد", "مؤثثة"],
     )
 
     # {عدد الصالات}+{مؤثثة}
