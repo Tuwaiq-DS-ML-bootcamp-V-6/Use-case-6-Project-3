@@ -32,9 +32,9 @@ df_top_10 = df[df['district'].isin(top_10_districts.index)]
 
 # Create the pie chart
 
-st.markdown("## highlighting riyadh from above")
+st.markdown("## Highlighting Riyadh from above")
 
-image_path = 'image copy 3.png'
+image_path = 'image copy 8.png'
 image = Image.open(image_path)
 frame_width = 2 
 frame_color = (21, 60, 61)  
@@ -42,9 +42,9 @@ framed_image = ImageOps.expand(image, border=frame_width, fill=frame_color)
 st.image(framed_image, use_column_width=True)
 st.markdown("As we delved into the heatmap, an interesting pattern came to light: the northern side of Riyadh has become the most sought-after area for buyers. This revelation encourages us to guide investors to focus their efforts on this thriving part of the city.")
 
-st.markdown("## age x price")
+st.markdown("## Age x Price")
 
-image_path = 'image copy 4.png'
+image_path = 'image copy 7.png'
 image = Image.open(image_path)
 frame_width = 2 
 frame_color = (21, 60, 61)  
@@ -62,6 +62,7 @@ st.image(framed_image, use_column_width=True)
 
 
 st.markdown("Through this exploration, we discovered that the age of the property impacts the price. Generally, older properties tend to have lower rental prices.")
+st.markdown("## Efficiency Over Size in Real Estate") 
 image_path = 'image copy.png'
 image = Image.open(image_path)
 frame_width = 2 
@@ -70,27 +71,32 @@ framed_image = ImageOps.expand(image, border=frame_width, fill=frame_color)
 st.image(framed_image, use_column_width=True)
 
 
-
+image_path = 'image copy 5.png' 
+image = Image.open(image_path)
+frame_width = 2 
+frame_color = (21, 60, 61)  
+framed_image = ImageOps.expand(image, border=frame_width, fill=frame_color)
+st.image(framed_image, use_column_width=True)
 
 st.markdown("From our analysis, we found that an increase in the number of bathrooms is associated with an increase in apartment size. However, this leads to a significant rise in prices, making them less attractive to buyers and investors. Therefore, investing in moderately sized apartments with a reasonable number of bathrooms can be more effective in attracting buyers and ensuring a quicker return on investment.")
 
-image_path = 'image.png'
+
+
+
+st.markdown("## Make the most of your space") 
+
+image_path = 'image copy 6.png'
 image = Image.open(image_path)
 frame_width = 2 
 frame_color = (21, 60, 61)  
 framed_image = ImageOps.expand(image, border=frame_width, fill=frame_color)
 st.image(framed_image, use_column_width=True)
-
-
 st.markdown("In Riyadh’s real estate market, the presence of kitchens and air conditioning systems holds immense sway over investor interest. These features not only enhance tenant satisfaction but also increase the property’s value and desirability, making it an attractive investment opportunity.")
 
-image_path = 's.png'
-image = Image.open(image_path)
-frame_width = 2 
-frame_color = (21, 60, 61)  
-framed_image = ImageOps.expand(image, border=frame_width, fill=frame_color)
-st.image(framed_image, use_column_width=True)
+st.markdown(" ") 
+st.markdown(" ") 
+st.markdown(" ") 
+st.title("In conclusion")
 
-st.markdown("In conclusion, the real estate market for apartments in Riyadh offers highly promising and attractive investment opportunities. The diversity of the city’s neighborhoods, ranging from upscale residential areas to industrial and commercial zones, provides a wide array of investment options catering to various preferences and strategies. If you are looking for an investment that yields tangible and quick returns, the apartment market in Riyadh is the perfect destination. Don’t miss the opportunity to join the thriving momentum in this dynamic and promising market!")
-
+st.markdown("the real estate market for apartments in Riyadh offers highly promising and attractive investment opportunities. The diversity of the city’s neighborhoods, ranging from upscale residential areas to industrial and commercial zones, provides a wide array of investment options catering to various preferences and strategies. If you are looking for an investment that yields tangible and quick returns, the apartment market in Riyadh is the perfect destination. Don’t miss the opportunity to join the thriving momentum in this dynamic and promising market!")
 
