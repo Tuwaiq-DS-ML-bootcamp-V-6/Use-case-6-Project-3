@@ -20,11 +20,10 @@ def bars():
     # Create a Plotly bar chart
     fig_age = px.bar(
         mean_age,
-        x="الحي",
-        y=uinput,
+        x=uinput,
+        y="الحي",
         labels={"الحي": "الحي", uinput: f"{uinput} (متوسط بالسنة)"},
         title=f"الحي vs. متوسط {uinput}",
-        orientation="h",
     )
 
     return fig_age
