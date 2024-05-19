@@ -97,8 +97,8 @@ def bar_color2():
 
     # Create traces for each value of uinput
     trace_0 = go.Bar(
-        y=counts["0"],
-        x=counts.index,
+        y=counts.index,
+        x=counts["0"],
         name=f" بدون {uinput}  ",
         text=counts["0"],
         textposition="inside",
