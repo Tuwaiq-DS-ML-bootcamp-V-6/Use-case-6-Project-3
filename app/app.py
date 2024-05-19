@@ -12,6 +12,9 @@ def intro():
 
 def conclusion():
     st.header("THE END")
+    st.markdown(
+        "With all his advice given, Silly Belly closed his eyes and said, 'Nighty night!' We’ve explored the best plots of land, cozy apartments, and luxurious villas in Riyadh. Sleep tight, and happy house hunting!"
+    )
 
 
 def sidebar(options):
