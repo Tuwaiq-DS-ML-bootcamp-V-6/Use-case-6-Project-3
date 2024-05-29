@@ -169,7 +169,7 @@ The dataset contains details about the available Lands in Riyadh. It includes in
 
 ---
 
-## About the Dataset Riyadh Aqaar Dataset {Villas}
+## About Riyadh Aqaar Dataset
 
 - **Source**: Kaggle user
 - **License**: -
@@ -185,7 +185,7 @@ The dataset contains details about the available Lands in Riyadh. It includes in
 
 ### Consistency
 
--_-_-_-_-_-_-_-_-_-_
+Only one file and Consistent
 
 ### Timeliness
 
